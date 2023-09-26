@@ -23,6 +23,9 @@ function App() {
 
     const inputDate = new Date(inputYear, inputMonth, inputDay);
 
+
+console.log(inputDate);
+
     if (!day || !month || !year) {
       setDayError('Day is required');
       setMonthError('Month is required');
@@ -77,8 +80,8 @@ function App() {
       setResult(null); 
     } else {
       // Calculate age
-      const years = currentYear - inputYear;
-      const months = currentMonth - inputMonth;
+      let years = currentYear - inputYear;
+      let months = currentMonth - inputMonth;
       let days = currentDay - inputDay - 1; 
 
       if (days < 0) {
@@ -194,7 +197,7 @@ function App() {
       </div>
     </main>
     <footer class="attribution">
-    <p style={{fontSize:`14px`,wordSpacing:`6px`}}>Challenge by <a href="https://www.frontendmentor.io/profile/jvssvj" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.linkedin.com/in/ahmad-majid-957ba9200" target="_blank">Ahmad Majid</a></p>
+    <p style={{fontSize:`14px`,wordSpacing:`6px`}}>Challenge by <a href="https://www.frontendmentor.io/profile/ahmad-majid" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.linkedin.com/in/ahmad-majid-957ba9200" target="_blank">Ahmad Majid</a></p>
   </footer>
   </body>
   );
